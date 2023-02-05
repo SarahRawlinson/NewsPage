@@ -71,6 +71,20 @@ $( function() {
 
 
 window.onload = function() {
+    setTimeout(function() {
+        $("#from").click(function() {
+            $('.ui-datepicker').addClass("ui-datepicker-active");
+        });
+
+        $("#to").click(function() {
+            $('.ui-datepicker').addClass("ui-datepicker-active");
+        });
+        $(document).click(function(event) {
+            if (!$(event.target).closest('#to').length && !$(event.target).closest('#from').length) {
+                $('.ui-datepicker').removeClass("ui-datepicker-active");
+            }
+        });
+    }, 500);
     
     document.getElementById("searchButton").addEventListener("click", function () {
         console.log('start search');

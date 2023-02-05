@@ -52,12 +52,6 @@
                 <label for="to">To:</label>
                 <input type="text" class="form-control" id="to">
             </div>
-
-            <div class="d-flex flex-wrap justify-content-end">
-                <button type="button" class="btn btn-primary m-2 ms-5 me-5 p-2" id="searchButton" style="width: 20%;">
-                    Search
-                </button>
-            </div>
             
         </form>
         <form class="col-4 form-search-values position-absolute-right m-5 p-5">
@@ -76,6 +70,15 @@
                 <label>Entered To:</label>
                 <span id="enteredTo"></span>
             </div>
+        </form>
+        <form class="col-12">
+
+            <div class="d-flex flex-wrap justify-content-end">
+                <button type="button" class="btn btn-primary m-2 ms-5 me-5 p-2" id="searchButton" style="width: 20%;">
+                    Search
+                </button>
+            </div>
+
         </form>
     </div>
     <div id="news-items"></div>
