@@ -3,6 +3,7 @@ const axios = require('axios');
 
 async function getNews(url) {
     try {
+        console.log(url);
         const response = await axios.get(url);
         const data = response.data;
         return {

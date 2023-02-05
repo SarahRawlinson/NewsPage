@@ -3,6 +3,7 @@
 
 function display_news(articles) {
     const newsContainer = document.getElementById("news-items");
+    newsContainer.innerHTML = "";
     newsContainer.classList.add("news-items", "d-flex", "flex-wrap", "justify-content-center");
 
     function addElement(parent, tag, classes, content) {
@@ -92,7 +93,7 @@ function searchNews(query, from, to) {
     const sortBy = "popularity";
     $.ajax({
         type: "POST",
-        url: "http://localhost:3000",
+        url: "http://localhost:3000/news",
         data: {
             query: query,
             from: from,

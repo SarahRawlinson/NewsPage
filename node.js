@@ -5,7 +5,7 @@ require("dotenv").config();
 const apiKey = process.env.API_KEY;
 
 // Use the API key in your application as needed
-// console.log("API Key:", apiKey);
+console.log("API Key:", apiKey);
 
 
 const http = require('http');
@@ -44,7 +44,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(3000, () => {
-    console.log('Server listening on http://localhost:3000');
+    console.log('Server listening on http://localhost:3000/news');
 });
 
 async function checkAPI(query, from, to, sortBy, apiKey) {
@@ -55,7 +55,7 @@ async function checkAPI(query, from, to, sortBy, apiKey) {
         data.articles.forEach(article => {
             add_db.addArticleToDB(article,query,from,to);
         });
-        console.log(data);
+        // console.log(data);
         return data;
     } catch (error) {
         console.error(error);
